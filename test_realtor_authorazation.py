@@ -175,8 +175,8 @@ class Authorization(unittest.TestCase):
 
     def tear_down(self):
         time.sleep(10)
-        self.driver.quit()
-        #self.driver.close() #  закрываем браузер
+        #self.driver.quit()
+        self.driver.close() #  закрываем браузер
         # pass
 
 
