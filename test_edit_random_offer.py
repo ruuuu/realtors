@@ -498,8 +498,8 @@ class edit_random_offer(unittest.TestCase):
     def tear_down(self):
         time.sleep(5)
 
-        self.driver.close()
-        #self.driver.quit()
+        #self.driver.close()
+        self.driver.quit()
         # pass
 
 
