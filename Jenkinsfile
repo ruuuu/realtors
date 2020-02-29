@@ -7,7 +7,7 @@ pipeline {
     stage ('Testing Stage') {
        steps {
           withMaven(maven : 'maven_3_6_3') {
-            sh 'python3 -m pytest' 
+            sh 'python3 -m unittest discover --pattern=test*.py' 
         }
        }
     }
