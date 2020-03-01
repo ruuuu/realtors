@@ -1,19 +1,16 @@
 pipeline {
   agent any
-  
   stages {
-    
-    
-    stage ('Testing Stage') {
-       steps {
-          withMaven(maven : 'maven_3_6_3') {
-            sh 'py -m unittest discover --pattern=test*.py' 
+     stage('build') {
+            steps {
+                
+                sh 'pip install -r requirements.txt'
+            }
         }
-       }
+     stage('test') {
+      steps {
+        sh 'nosetests test_create_obuavleune.py'
+      }   
     }
-    
-    
-    
-
   }
 }
