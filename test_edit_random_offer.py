@@ -10,6 +10,7 @@ from selenium.webdriver.support.ui import Select  # работа со списк
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains # lля сколинга к нужному элементу импортируем класс ActionChains
+from selenium.webdriver.chrome.options import  Options
 from random import randint
 import string
 import  allure
@@ -110,7 +111,10 @@ class edit_random_offer(unittest.TestCase):
 
 
     def setUp(self):
-        self.driver = webdriver.Chrome('/Users/rufina/.jenkins/workspace/realtors_master/chromedriver')  # '/usr/local/bin/chromedriver'
+        opts = Options()  # чтобы тест выполнялся без интерфейса
+        opts.headless = True  # чтобы тест выполнялся без интерфейса
+        
+        self.driver = webdriver.Chrome('/Users/rufina/.jenkins/workspace/realtors_master/chromedriver', options=opts)  # '/usr/local/bin/chromedriver'
 
         #self.driver.set_window_position(0, 0)  # устанавливает позицию левого верзнего угла окна браузера
         self.driver.set_window_size(1440, 900)  # устанавливае мразмеры окна
