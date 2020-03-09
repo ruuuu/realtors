@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains # lля сколинга к нужному элементу импортируем класс ActionChains
 from random import randint
 import string
-#import allure
+import allure
 
 class Authorization(unittest.TestCase):
 
@@ -102,7 +102,7 @@ class Authorization(unittest.TestCase):
 
         return str(' '.join(list_slov)) + for_email[randint(0, len(for_email)-1)]
 
-    #@allure.step("authotization admin")
+    @allure.step("authotization admin")
     def authorization(self, driver):
 
 
