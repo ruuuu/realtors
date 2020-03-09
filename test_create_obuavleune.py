@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains # lля сколинга к нужному элементу импортируем класс ActionChains
 from random import randint
 import string
-#import allure
+import allure
 
 # Создание объявления
 
@@ -127,7 +127,7 @@ class create_obuavlenie(unittest.TestCase):
                                 't', 'u', 'w', 'x', 'y', 'z', 'A'
                                 ' ']  # поле
 
-    #@allure.step("authotization admin")
+    @allure.step("authotization admin")
     def authorization(self, driver):
 
         driver.get("https://realtor.technaxis.com/")
@@ -197,7 +197,7 @@ class create_obuavlenie(unittest.TestCase):
             WebDriverWait(driver, 10).until(ec.presence_of_element_located((By.XPATH, "//button[@class='gl-btn mod-fill mod-primary submit-btn']"))).click()
             time.sleep(2)
 
-            if (k == 2 or k == 5 or k == 6): # склад, производство, торговое помещение
+            if (k == 6 or k == 9 or k == 10): # склад, производство, торговое помещение
 
                 WebDriverWait(driver, 10).until(
                     ec.presence_of_element_located(
@@ -232,7 +232,7 @@ class create_obuavlenie(unittest.TestCase):
                 time.sleep(1)
 
 
-            if (k == 3):  # Гараж
+            if (k == 7):  # Гараж
 
                 WebDriverWait(driver, 10).until(
                     ec.presence_of_element_located(
@@ -253,7 +253,7 @@ class create_obuavlenie(unittest.TestCase):
                     randint(290, 5050))  # Оющая стоимость
 
 
-            if(k == 4 or k == 7): # жилой учатсок, коммер земля
+            if(k == 8 or k == 11): # жилой учатсок, коммер земля
 
                 WebDriverWait(driver, 10).until(
                     ec.presence_of_element_located(
@@ -269,7 +269,7 @@ class create_obuavlenie(unittest.TestCase):
 
 
 
-            if(k == 10 or k == 8):# Квартра, Офис
+            if(k == 2 or k == 5):# Квартра, Офис
 
                 WebDriverWait(driver, 10).until(
                     ec.presence_of_all_elements_located(
@@ -304,7 +304,7 @@ class create_obuavlenie(unittest.TestCase):
 
 
 
-            if(k == 11): # дОм
+            if(k == 3): # дОм
                 WebDriverWait(driver, 10).until(
                     ec.presence_of_all_elements_located(
                         (By.XPATH, "//button[@class='gl-btn mod-fill option mod-trans mod-hover']")))[
@@ -331,7 +331,7 @@ class create_obuavlenie(unittest.TestCase):
                     randint(290, 5050))  # Оющая стоимость
 
 
-            if(k == 9): #  Комната
+            if(k == 4): #  Комната
                 WebDriverWait(driver, 10).until(
                     ec.presence_of_element_located(
                         (By.XPATH, "//input[@formcontrolname='totalAreaInSquareMeters']"))).send_keys(
