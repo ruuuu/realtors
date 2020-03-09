@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains # lля сколинга к нужному элементу импортируем класс ActionChains
 from random import randint
 import string
-import allure
+#import allure
 
 # Создание объявления
 
@@ -127,7 +127,7 @@ class create_obuavlenie(unittest.TestCase):
                                 't', 'u', 'w', 'x', 'y', 'z', 'A'
                                 ' ']  # поле
 
-    @allure.step("authotization admin")
+    #@allure.step("authotization admin")
     def authorization(self, driver):
 
         driver.get("https://realtor.technaxis.com/")
