@@ -17,7 +17,7 @@ from selenium.webdriver.chrome.options import Options
 import string
 
 
-#import  allure
+import  allure
 
 # админка, список объявлений
 
@@ -129,7 +129,7 @@ class Admin_offers(unittest.TestCase):
                                 't', 'u', 'w', 'x', 'y', 'z', 'A'
                                                               ' ']  # поле
 
-    # @allure.step("authotization admin")
+    @allure.step("authotization admin")
     def authorization(self, driver):
 
         driver.get("https://admin.realtor.technaxis.com/external/login")
