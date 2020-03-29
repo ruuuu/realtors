@@ -405,41 +405,21 @@ class edit_random_offer(unittest.TestCase):
 
             time.sleep(2)
 
+             # фото набора
+            file_dicitionary = {0: "/Users/rufina/Desktop/realtors_images/98_7u6 y5tr.jpeg",
+                                1: "/Users/rufina/Desktop/realtors_images/Без названия.jpeg",
+                                2: "/Users/rufina/Desktop/realtors_images/дом9.jpeg",
+                                3: "/Users/rufina/Desktop/realtors_images/дом25.jpg",
+                                4: "/Users/rufina/Desktop/realtors_images/не мое это и все .jpeg",
+                                5: "/Users/rufina/Desktop/realtors_images/oiuyitrtr.jpeg",
+                                6: "/Users/rufina/Desktop/realtors_images/oipuu.jpeg",
+                                7: "/Users/rufina/Desktop/realtors_images/склад5.jpeg",
+                                8: "/Users/rufina/Desktop/realtors_images/склад3.jpeg",
+                                9: "/Users/rufina/Desktop/realtors_images/склад6.jpeg"
 
+                        }
 
-            # фото набора
-            file_dicitionary = {0: "/Users/rufina/Desktop/realtors_images/команата4.jpg",
-                                1: "/Users/rufina/Desktop/realtors_images/дом7.jpeg",
-                                2: "/Users/rufina/Desktop/realtors_images/дом25.jpg",
-                                3: "/Users/rufina/Desktop/realtors_images/дом27.jpg",
-                                4: "/Users/rufina/Desktop/realtors_images/команата4.jpg",
-                                5: "/Users/rufina/Desktop/realtors_images/команата5.jpg",
-                                6: "/Users/rufina/Desktop/realtors_images/команата6.jpg",
-                                7: "/Users/rufina/Desktop/realtors_images/команата9.jpg",
-                                8: "/Users/rufina/Desktop/realtors_images/команата10.jpg",
-                                9: "/Users/rufina/Desktop/realtors_images/команата11.jpg",
-                                10: "/Users/rufina/Desktop/realtors_images/команата7.jpg",
-                                11: "/Users/rufina/Desktop/realtors_images/команата17.jpg",
-                                12: "/Users/rufina/Desktop/realtors_images/офис1.jpeg",
-                                13: "/Users/rufina/Desktop/realtors_images/офис6.jpeg",
-                                14: "/Users/rufina/Desktop/realtors_images/офис8.jpg",
-                                15: "/Users/rufina/Desktop/realtors_images/произвлдво2.jpeg",
-                                16: "/Users/rufina/Desktop/realtors_images/произвлдво3.jpeg",
-                                17: "/Users/rufina/Desktop/realtors_images/произвлдво4.jpeg",
-                                18: "/Users/rufina/Desktop/realtors_images/произвлдво5.jpeg",
-                                19: "/Users/rufina/Desktop/realtors_images/склад1.jpeg",
-                                20: "/Users/rufina/Desktop/realtors_images/склад2.jpeg",
-                                21: "/Users/rufina/Desktop/realtors_images/склад3.jpeg",
-                                22: "/Users/rufina/Desktop/realtors_images/склад5.jpeg",
-                                23: "/Users/rufina/Desktop/realtors_images/oiuyitrtr.jpeg",
-                                24: "/Users/rufina/Desktop/realtors_images/zxcfvghbjn.jpeg",
-                                25: "/Users/rufina/Desktop/realtors_images/"
-
-
-
-                                 }
-
-
+           
             WebDriverWait(driver, 10).until(
                 ec.presence_of_all_elements_located((By.XPATH, "//input[@type='file']")))[0].send_keys(
                 file_dicitionary[randint(0, len(file_dicitionary) - 1)])
