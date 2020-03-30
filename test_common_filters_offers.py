@@ -148,11 +148,11 @@ class Filter_common_offers(unittest.TestCase):
         time.sleep(2)  # чтобы сразу окно не закрывалось
         WebDriverWait(driver, 10).until(
             ec.presence_of_element_located((By.XPATH, "//input[@formcontrolname='login']"))).send_keys(
-            "rufinka_91@mail.ru") #
+            "2some32kkk@mail.ru") #
 
         time.sleep(2)
         WebDriverWait(driver, 10).until(
-            ec.presence_of_element_located((By.XPATH, "//input[@formcontrolname='password']"))).send_keys("password1")
+            ec.presence_of_element_located((By.XPATH, "//input[@formcontrolname='password']"))).send_keys("password")
 
         time.sleep(2)
 
