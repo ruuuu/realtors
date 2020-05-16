@@ -147,7 +147,7 @@ class create_obuavlenie(unittest.TestCase):
         time.sleep(2)  # чтобы сразу окно не закрывалось
         WebDriverWait(driver, 10).until(
             ec.presence_of_element_located((By.XPATH, "//input[@formcontrolname='login']"))).send_keys(
-            "2some32kkk@mail.ru") #
+            "rufinka_91@mail.ru") #
 
         time.sleep(2)
         WebDriverWait(driver, 10).until(
