@@ -9,7 +9,7 @@ pipeline {
        // }
      stage('test') {
       steps {
-        sh 'nosetests test_create_obuavleune.py'
+        sh 'python3 -m  unittest'
       }   
     }
   }
